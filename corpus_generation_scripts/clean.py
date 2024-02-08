@@ -53,7 +53,7 @@ def read_config(cfile):
 def load_jsonl(jsonl):
     #Read the json and get it into pandas
     with open(jsonl) as f:
-        lines = f.read().splitlines()
+        lines = f.readlines()
     df_inter = pd.DataFrame(lines)
     df_inter.columns = ['json_element']
     
